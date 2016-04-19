@@ -1,0 +1,44 @@
+$oscuro: steelblue;
+$claro: azure;
+.menu{
+    padding: 0;
+    list-style: none;
+    li{
+            a{
+                background: $oscuro;
+                color: $claro;
+                display: block;
+                line-height: 3;
+                padding: 0 1em;
+                text-decoration: none;
+                transition: all 1s;
+                &:hover{
+                    box-shadow: 0 50px rgba(black, .3) inset;
+                }
+            }
+        }
+    @media screen and (min-width: 500px){
+        display: flex;
+        justify-content: center;
+        
+    }
+}
+.menu-side, .sub-side{
+    padding: 0;
+    list-style: none;
+    li{
+        padding: 0 0,5em;
+        line-height: 2;
+        background: $oscuro;
+        color: $claro;
+        cursor: pointer;
+        &:hover{
+            background: rgba(black, .3);
+            color: $claro;
+        }
+    }
+}
+
+.listaS{
+    padding-left: 5px;
+}

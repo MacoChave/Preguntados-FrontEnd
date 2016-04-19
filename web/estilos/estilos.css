@@ -1,0 +1,87 @@
+.menu {
+  padding: 0;
+  list-style: none;
+}
+
+.menu li a {
+  background: steelblue;
+  color: azure;
+  display: block;
+  line-height: 3;
+  padding: 0 1em;
+  text-decoration: none;
+  transition: all 1s;
+}
+
+.menu li a:hover {
+  box-shadow: 0 50px rgba(0, 0, 0, 0.3) inset;
+}
+
+@media screen and (min-width: 500px) {
+  .menu {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.menu-side, .sub-side {
+  padding: 0;
+  list-style: none;
+}
+
+.menu-side li, .sub-side li {
+  padding: 0 0, 5em;
+  line-height: 2;
+  background: steelblue;
+  color: azure;
+  cursor: pointer;
+}
+
+.menu-side li:hover, .sub-side li:hover {
+  background: rgba(0, 0, 0, 0.3);
+  color: azure;
+}
+
+.listaS {
+  padding-left: 5px;
+}
+
+.caja {
+  box-shadow: 0 0 10px black;
+  padding: 1em;
+}
+
+.caja .texto {
+  border: 1px solid steelblue;
+  border-radius: 10px;
+  color: steelblue;
+  line-height: 2;
+  padding: 0 1em;
+}
+
+.caja .boton {
+  background: steelblue;
+  border-radius: 10px;
+  color: whitesmoke;
+  line-height: 2;
+  padding: 0 1em;
+}
+
+body {
+  background: linear-gradient(darkgray, whitesmoke, whitesmoke, darkgray);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 500px) {
+  .main {
+    display: flex;
+  }
+  .main aside {
+    width: 20%;
+  }
+  .main main {
+    flex: auto;
+  }
+}

@@ -1,0 +1,20 @@
+$borde: steelblue;
+$relleno: whitesmoke;
+.caja{
+    box-shadow: 0 0 10px black;
+    padding: 1em;
+    .texto{
+        border: 1px solid $borde;
+        border-radius: 10px;
+        color: $borde;
+        line-height: 2;
+        padding: 0 1em;
+    }
+    .boton{
+        background: $borde;
+        border-radius: 10px;
+        color: $relleno;
+        line-height: 2;
+        padding: 0 1em;
+    }
+}

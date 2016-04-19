@@ -1,0 +1,21 @@
+@import "menu.scss";
+@import "form.scss";
+
+body{
+    background: linear-gradient(darkgray, whitesmoke, whitesmoke, darkgray);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main{
+    @media screen and (min-width: 500px){
+        display: flex;
+        aside{
+            width: 20%;
+        }
+        main{
+            flex: auto;
+        }
+    }
+}

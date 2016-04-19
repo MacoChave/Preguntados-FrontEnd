@@ -1,0 +1,493 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://Logica/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Logica/">
+
+<xs:element name="Registro" type="tns:Registro" />
+
+<xs:element name="RegistroResponse" type="tns:RegistroResponse" />
+
+<xs:element name="addCarrera" type="tns:addCarrera" />
+
+<xs:element name="addCarreraResponse" type="tns:addCarreraResponse" />
+
+<xs:element name="addCurso" type="tns:addCurso" />
+
+<xs:element name="addCursoResponse" type="tns:addCursoResponse" />
+
+<xs:element name="addItem" type="tns:addItem" />
+
+<xs:element name="addItemResponse" type="tns:addItemResponse" />
+
+<xs:element name="bajaUsuario" type="tns:bajaUsuario" />
+
+<xs:element name="bajaUsuarioResponse" type="tns:bajaUsuarioResponse" />
+
+<xs:element name="crearPregunta" type="tns:crearPregunta" />
+
+<xs:element name="crearPreguntaResponse" type="tns:crearPreguntaResponse" />
+
+<xs:element name="crearRespuesta" type="tns:crearRespuesta" />
+
+<xs:element name="crearRespuestaResponse" type="tns:crearRespuestaResponse" />
+
+<xs:element name="editEstadoPregunta" type="tns:editEstadoPregunta" />
+
+<xs:element name="editEstadoPreguntaResponse" type="tns:editEstadoPreguntaResponse" />
+
+<xs:element name="editNivelPregunta" type="tns:editNivelPregunta" />
+
+<xs:element name="editNivelPreguntaResponse" type="tns:editNivelPreguntaResponse" />
+
+<xs:element name="editPassUsuario" type="tns:editPassUsuario" />
+
+<xs:element name="editPassUsuarioResponse" type="tns:editPassUsuarioResponse" />
+
+<xs:element name="editRolUsuario" type="tns:editRolUsuario" />
+
+<xs:element name="editRolUsuarioResponse" type="tns:editRolUsuarioResponse" />
+
+<xs:element name="hello" type="tns:hello" />
+
+<xs:element name="helloResponse" type="tns:helloResponse" />
+
+<xs:element name="iniciarSesion" type="tns:iniciarSesion" />
+
+<xs:element name="iniciarSesionResponse" type="tns:iniciarSesionResponse" />
+
+<xs:element name="listaPregunta" type="tns:listaPregunta" />
+
+<xs:element name="listaPreguntaResponse" type="tns:listaPreguntaResponse" />
+
+<xs:element name="mostrarAllUsuario" type="tns:mostrarAllUsuario" />
+
+<xs:element name="mostrarAllUsuarioResponse" type="tns:mostrarAllUsuarioResponse" />
+
+<xs:element name="mostrarCarreraPregunta" type="tns:mostrarCarreraPregunta" />
+
+<xs:element name="mostrarCarreraPreguntaResponse" type="tns:mostrarCarreraPreguntaResponse" />
+
+<xs:element name="mostrarCursoPregunta" type="tns:mostrarCursoPregunta" />
+
+<xs:element name="mostrarCursoPreguntaResponse" type="tns:mostrarCursoPreguntaResponse" />
+
+<xs:element name="mostrarEmail" type="tns:mostrarEmail" />
+
+<xs:element name="mostrarEmailResponse" type="tns:mostrarEmailResponse" />
+
+<xs:element name="mostrarEstadoPregunta" type="tns:mostrarEstadoPregunta" />
+
+<xs:element name="mostrarEstadoPreguntaResponse" type="tns:mostrarEstadoPreguntaResponse" />
+
+<xs:element name="mostrarEstadoUsuario" type="tns:mostrarEstadoUsuario" />
+
+<xs:element name="mostrarEstadoUsuarioResponse" type="tns:mostrarEstadoUsuarioResponse" />
+
+<xs:element name="mostrarExp" type="tns:mostrarExp" />
+
+<xs:element name="mostrarExpResponse" type="tns:mostrarExpResponse" />
+
+<xs:element name="mostrarInventario" type="tns:mostrarInventario" />
+
+<xs:element name="mostrarInventarioResponse" type="tns:mostrarInventarioResponse" />
+
+<xs:element name="mostrarItem" type="tns:mostrarItem" />
+
+<xs:element name="mostrarItemResponse" type="tns:mostrarItemResponse" />
+
+<xs:element name="mostrarNivelPregunta" type="tns:mostrarNivelPregunta" />
+
+<xs:element name="mostrarNivelPreguntaResponse" type="tns:mostrarNivelPreguntaResponse" />
+
+<xs:element name="mostrarOpcionRespuesta" type="tns:mostrarOpcionRespuesta" />
+
+<xs:element name="mostrarOpcionRespuestaResponse" type="tns:mostrarOpcionRespuestaResponse" />
+
+<xs:element name="mostrarPregunta" type="tns:mostrarPregunta" />
+
+<xs:element name="mostrarPreguntaPendiente" type="tns:mostrarPreguntaPendiente" />
+
+<xs:element name="mostrarPreguntaPendienteResponse" type="tns:mostrarPreguntaPendienteResponse" />
+
+<xs:element name="mostrarPreguntaResponse" type="tns:mostrarPreguntaResponse" />
+
+<xs:element name="mostrarRespuesta" type="tns:mostrarRespuesta" />
+
+<xs:element name="mostrarRespuestaResponse" type="tns:mostrarRespuestaResponse" />
+
+<xs:element name="mostrarRol" type="tns:mostrarRol" />
+
+<xs:element name="mostrarRolResponse" type="tns:mostrarRolResponse" />
+
+<xs:element name="mostrarUsuario" type="tns:mostrarUsuario" />
+
+<xs:element name="mostrarUsuarioResponse" type="tns:mostrarUsuarioResponse" />
+
+<xs:complexType name="mostrarCarreraPregunta">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="mostrarCarreraPreguntaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Registro">
+<xs:sequence>
+<xs:element name="usuario" type="xs:string" minOccurs="0" />
+<xs:element name="pass" type="xs:string" minOccurs="0" />
+<xs:element name="email" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="RegistroResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarRol">
+<xs:sequence>
+<xs:element name="usuario" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarRolResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarEstadoUsuario">
+<xs:sequence>
+<xs:element name="usuario" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarEstadoUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarOpcionRespuesta">
+<xs:sequence>
+<xs:element name="pregunta" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarOpcionRespuestaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarInventario">
+<xs:sequence>
+<xs:element name="usuario" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarInventarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearPregunta">
+<xs:sequence>
+<xs:element name="curso" type="xs:string" minOccurs="0" />
+<xs:element name="nivel" type="xs:string" minOccurs="0" />
+<xs:element name="pregunta" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearPreguntaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarItem">
+<xs:sequence>
+<xs:element name="tipo" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarItemResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addItem">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="descripcion" type="xs:string" minOccurs="0" />
+<xs:element name="rareza" type="xs:int" />
+<xs:element name="efectividad" type="xs:int" />
+<xs:element name="bGana" type="xs:int" />
+<xs:element name="bPierde" type="xs:int" />
+<xs:element name="tipo" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addItemResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editPassUsuario">
+<xs:sequence>
+<xs:element name="usuario" type="xs:string" minOccurs="0" />
+<xs:element name="pass" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editPassUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="iniciarSesion">
+<xs:sequence>
+<xs:element name="usuario" type="xs:string" minOccurs="0" />
+<xs:element name="pass" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="iniciarSesionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarPreguntaPendiente">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="mostrarPreguntaPendienteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarAllUsuario">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="mostrarAllUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarEmail">
+<xs:sequence>
+<xs:element name="usuario" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarEmailResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarEstadoPregunta">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="mostrarEstadoPreguntaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarRespuesta">
+<xs:sequence>
+<xs:element name="pregunta" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarRespuestaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearRespuesta">
+<xs:sequence>
+<xs:element name="pregunta" type="xs:string" minOccurs="0" />
+<xs:element name="opcion" type="xs:string" minOccurs="0" />
+<xs:element name="correcta" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearRespuestaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarNivelPregunta">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="mostrarNivelPreguntaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editNivelPregunta">
+<xs:sequence>
+<xs:element name="nivel" type="xs:string" minOccurs="0" />
+<xs:element name="pregunta" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editNivelPreguntaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editRolUsuario">
+<xs:sequence>
+<xs:element name="usuario" type="xs:string" minOccurs="0" />
+<xs:element name="rol" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editRolUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarCursoPregunta">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="mostrarCursoPreguntaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarPregunta">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="mostrarPreguntaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="bajaUsuario">
+<xs:sequence>
+<xs:element name="usuario" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="bajaUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCarrera">
+<xs:sequence>
+<xs:element name="carrera" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCarreraResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarExp">
+<xs:sequence>
+<xs:element name="usuario" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarExpResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCurso">
+<xs:sequence>
+<xs:element name="carrera" type="xs:string" minOccurs="0" />
+<xs:element name="curso" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCursoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarUsuario">
+<xs:sequence>
+<xs:element name="usuario" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editEstadoPregunta">
+<xs:sequence>
+<xs:element name="estado" type="xs:boolean" />
+<xs:element name="pregunta" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editEstadoPreguntaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listaPregunta">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listaPreguntaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:pregunta" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="pregunta">
+<xs:sequence>
+<xs:element name="cod_curso" type="xs:int" />
+<xs:element name="cod_nivel" type="xs:int" />
+<xs:element name="estado" type="xs:boolean" />
+<xs:element name="pregunta" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

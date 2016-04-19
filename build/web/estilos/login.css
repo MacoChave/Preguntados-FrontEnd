@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Sesion {
+  box-shadow: none;
+  padding: 1em;
+  width: 20%;
+  order: 2;
+}
+
+.Registro {
+  box-shadow: none;
+  padding: 1em;
+  flex: auto;
+  order: 1;
+}
